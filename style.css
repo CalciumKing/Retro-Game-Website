@@ -1,7 +1,9 @@
-/* Basic Styling */
 @font-face {
-    font-family: ArcadeClassicRegular;
-    src: url("fonts/ARCADECLASSIC.TTF");
+    font-family: gamerFont;
+    src:url(ARCADECLASSIC.TTF);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: gamerFont;
 }
 html {
     font-family: 'ArcadeClassicRegular';
@@ -33,6 +35,7 @@ header{
     height: 100%;
     border-radius: 0 15px 15px 0;
     transition: all 0.5s linear;
+    z-index: 5;
 }
 header:hover {
     width: 15vw;
@@ -59,8 +62,11 @@ nav a {
     display: block;
 }
 p {
-    text-indent: 2.5vw;
     font-size: 2.2vh;
+}
+
+.paragraphText{
+    text-indent: 2.5vw;
 }
 
 main {
@@ -69,7 +75,8 @@ main {
     color: #000000;
     height: 60%;
     width: 100%;
-    margin-left: 25%;
+    margin-left: 10%;
+    margin-bottom: 5vh;
 }
 footer {
     background-color: #4f4f4f;
@@ -90,8 +97,8 @@ a {
 
 /* Buttons */
 
-.navList > li, .dropdownArea > li {
-    margin-top: 5vh;
+.navList > li{
+    margin-top: 2vh;
 }
 nav li {
     padding: 3vw 1vh;
@@ -118,8 +125,11 @@ nav li {
 .homecontact {
     background-color: #262626;
     rotate: -45deg;
-    padding: 1.5vw .5vh;
+    height: 1vh;
+  
+    padding: 1vw;
     border-radius: 15vw;
+
 }
 
 /* Footer Styling */
@@ -152,4 +162,51 @@ nav li {
     align-items: center;
     width: 69vw;
     flex-direction: column;
+}
+.gameDisplay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.slideshow-container {
+    overflow-x: hidden;
+    white-space: nowrap;
+    align-items: left;
+    padding-bottom: 10vh;
+
+}
+#slideshows img {
+    width: 33vw;
+    height: 20vw;
+    
+}
+#prevConsoleButton, #nextConsoleButton {
+    margin: 20% 2%;
+}
+#prevGameButton, #nextGameButton {
+    margin: 40% 2%;
+}
+.prev, .next {
+    background-color: #262626;
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    padding: 16px;
+    margin-top: -22px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+.next {
+    right: 0;
+}
+#featuredImage{
+    margin-left: 25vw;
+    
 }
