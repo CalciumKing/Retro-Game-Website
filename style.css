@@ -5,6 +5,14 @@
 h1, h2, h3, h4, h5, h6{
     font-family: gamerFont;
 }
+img {
+    transition: transform .2s;
+}
+img:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
+}
 html {
     font-family: 'ArcadeClassicRegular';
     height: 100%;
@@ -15,7 +23,17 @@ body {
     color: #000000;
     overflow-x: hidden;
 }
-
+#toTopButton{
+    z-index: 99;
+    position: fixed;
+    right: 5vw;
+    bottom: 10vh;
+    background-color: transparent;
+}
+#toTopButton > img{
+    height: 10vh;
+    width: auto;
+}
 .topTitle{
     display: flex;
     justify-content: center;
@@ -23,6 +41,7 @@ body {
     background-color: #4f4f4f;
     width: 100vw;   
     height: 12vh;
+    box-shadow: 1v#000000;
     
 }
 
@@ -39,6 +58,9 @@ header{
 }
 header:hover {
     width: 15vw;
+}
+header:hover p > a {
+    height: 10vw;
 }
 header:hover nav a {
     opacity: 1;
@@ -111,7 +133,7 @@ nav li {
 }
 
 .redButton {
-    background-color: #FF3131;
+    background-color: #FF3131; 
 }
 
 .yellowButton {
@@ -123,13 +145,14 @@ nav li {
 }
 
 .homecontact {
+    /* margin-left: 30%; */
+    margin-top: 5vh;
     background-color: #262626;
     rotate: -45deg;
-    height: 1vh;
-  
+    height: 5vh;
+    /* width: 2vh; */
     padding: 1vw;
     border-radius: 15vw;
-
 }
 
 /* Footer Styling */
@@ -186,6 +209,7 @@ nav li {
 }
 #prevGameButton, #nextGameButton {
     margin: 40% 2%;
+    top: 20%;
 }
 .prev, .next {
     background-color: #262626;
@@ -208,5 +232,14 @@ nav li {
 }
 #featuredImage{
     margin-left: 25vw;
-    
+    width: 50vw;
+    height: 50vh;
 }
+.credit{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: gamerFont;
+    font-size: 3vh;
+}
+
